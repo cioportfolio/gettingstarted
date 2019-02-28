@@ -21,8 +21,7 @@ layout: default
     Make your first website.
     <ul><li>Create an HTML page as you learnt in step 2.</li>
         <li>Add these three lines at the top (don't worry why right now)
-            <pre><code>
----
+            <pre><code>---
 layout: default
 ---
 </code></pre></li>
@@ -37,43 +36,43 @@ layout: default
         <li>Download and install <a href="https://download.virtualbox.org/virtualbox/6.0.4/VirtualBox-6.0.4-128413-Win.exe">VirtualBox (Windows 64 bit version)</a>. Vagrant uses this to run Unix inside your Windows laptop! You can use VirtualBox yourself but it can be a bit fiddly so best to let Vagrant do it to start with.</li>
         <li>Now you will need to run some commands. Type ```cmd``` in the Windows search bar at the bottom of the screen.</li>
         <li>You will see something like:
-            ```
+            <pre><code>
             C:\Users\<i>username</i>>
-            ```
+            </code></pre>
             Make a new directory by typing
-            ```mkdir ubuntu```
+            <pre><code>mkdir ubuntu```
             Move into the directory by typing
-            ```cd ubuntu```
+            <pre><code>cd ubuntu</code></pre>
             The prompt should change to
-            ```
+            <pre><code>
             C:\Users\<i>username</>\ubuntu>
-            ```
+            </code></pre>
             </li>
             <li>Go into <a href="https://github.com/cioportfolio/gettingstarted">the github area for these lessons</a>. Download ```Vagrantfile``` and ```bootstrap.sh``` into the new folder you created</li>
             <li>Back to the command line now:
-                ```...\ubuntu> vagrant up```
+                <pre><code>...\ubuntu> vagrant up```
                 This will take some time, install loads of updates and set up unix.
                 You will get a new purple window but you can't get in there yet.
-                ```
+                <pre><code>
                 ...\ubuntu> vagrant ssh
-                ```
+                </code></pre>
                 Now you will see something like
-                ```
+                <pre><code>
                 vagrant@ubuntu-xenial:~$
-                ```
+                </code></pre>
                 Unix is up and running. Now you need an account. Use this command and follow the prompts:
-                ```
+                <pre><code>
                 vagrant@ubuntu-xenial:~$ sudo adduser stefy
-                ```
+                </code></pre>
                 Get back to windows with
-                                ```
+                <pre><code>
                 vagrant@ubuntu-xenial:~$ exit
-                ```
+                </code></pre>
                 The next commands will stop and restart unix (it will be much quicker this time). You should now be able to logon with that account you set up in the purple/red window.
-                ```
+                <pre><code>
                 ...\ubuntu> vagrant halt
                 ...\ubuntu> vagrant up
-                ```
+                </code></pre>
                 You can 'up' and 'halt' whenever you need to start and stop the unix app.
                 Time to play around.
                 Find the "ubuntu software" icon on the left hand side.
