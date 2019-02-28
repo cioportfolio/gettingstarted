@@ -37,41 +37,43 @@ layout: default
         <li>Now you will need to run some commands. Type ```cmd``` in the Windows search bar at the bottom of the screen.</li>
         <li>You will see something like:
             <pre><code>
-            C:\Users\<i>username</i>>
+C:\Users\<i>username</i>>
             </code></pre>
             Make a new directory by typing
-            <pre><code>mkdir ubuntu```
+            <pre><code>
+C:\Users\<i>username</i>><b>mkdir ubuntu</b></code></pre>
             Move into the directory by typing
-            <pre><code>cd ubuntu</code></pre>
+<pre><code><b>cd ubuntu</b></code></pre>
             The prompt should change to
             <pre><code>
-            C:\Users\<i>username</>\ubuntu>
+C:\Users\<i>username</i>\ubuntu>
             </code></pre>
             </li>
-            <li>Go into <a href="https://github.com/cioportfolio/gettingstarted">the github area for these lessons</a>. Download ```Vagrantfile``` and ```bootstrap.sh``` into the new folder you created</li>
+            <li>Go into <a href="https://github.com/cioportfolio/gettingstarted">the github area for these lessons</a>. Download <code>Vagrantfile</code> and <code>bootstrap.sh<code> into the new folder you created</li>
             <li>Back to the command line now:
-                <pre><code>...\ubuntu> vagrant up```
+  <pre><code>
+  ...\ubuntu><b>vagrant up</b></code></pre>
                 This will take some time, install loads of updates and set up unix.
                 You will get a new purple window but you can't get in there yet.
                 <pre><code>
-                ...\ubuntu> vagrant ssh
+...\ubuntu><b>vagrant ssh</b>
                 </code></pre>
                 Now you will see something like
                 <pre><code>
-                vagrant@ubuntu-xenial:~$
+vagrant@ubuntu-xenial:~$
                 </code></pre>
                 Unix is up and running. Now you need an account. Use this command and follow the prompts:
                 <pre><code>
-                vagrant@ubuntu-xenial:~$ sudo adduser stefy
+vagrant@ubuntu-xenial:~$ <b>sudo adduser stefy</b>
                 </code></pre>
                 Get back to windows with
                 <pre><code>
-                vagrant@ubuntu-xenial:~$ exit
+vagrant@ubuntu-xenial:~$ <b>exit</b>
                 </code></pre>
                 The next commands will stop and restart unix (it will be much quicker this time). You should now be able to logon with that account you set up in the purple/red window.
                 <pre><code>
-                ...\ubuntu> vagrant halt
-                ...\ubuntu> vagrant up
+                ...\ubuntu><b>vagrant halt</b>
+                ...\ubuntu><b>vagrant up</b>
                 </code></pre>
                 You can 'up' and 'halt' whenever you need to start and stop the unix app.
                 Time to play around.
