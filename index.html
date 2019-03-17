@@ -5,9 +5,10 @@ layout: default
 <ul>
     <li>The basics</li>
     <li><a href="ubuntu">Unix on your laptop</a></li>
-    <li>Wordpress on your laptop</li>
+    <li><a href="wordpress">Wordpress on your laptop</a></li>
     <li>Getting ready to go public</li>
 </ul>
+<div style="display: inline-block; float: right;"><a href="ubuntu">Next lesson</a></div>
 
 <h1>The basics</h1>
 <ol>
@@ -40,68 +41,7 @@ layout: default
 <li>It might take a few minutes to work so wait a bit and refresh a few times to see your glorious creation</li>
 </ul>
     </li>
-<li>
-    Get started with Unix - This is an operating system like Windows10 which is used by developers and website administrators.
-    <ul><li>Download and install <a href="https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.msi">Vagrant (Windows 64 bit version)</a>. This is software that will be able to start Unix inside your Windows laptop!</li>
-        <li>Download and install <a href="https://download.virtualbox.org/virtualbox/6.0.4/VirtualBox-6.0.4-128413-Win.exe">VirtualBox (Windows 64 bit version)</a>. Vagrant uses this to run Unix inside your Windows laptop! You can use VirtualBox yourself but it can be a bit fiddly so best to let Vagrant do it to start with.</li>
-        <li>Now you will need to run some commands. Type <code>cmd</code> in the Windows search bar at the bottom of the screen and start the command prompt app.</li>
-        <li>You will see something like:
-<pre><code>C:\Users\<i>username</i>></code></pre>
-            Make a new directory by typing
-            <pre><code>C:\Users\<i>username</i>><b>mkdir ubuntu</b></code></pre>
-            Move into the directory by typing
-<pre><code><b>cd ubuntu</b></code></pre>
-            The prompt should change. Make a note of the prompt so you can get to the folder in Windows Explorer. It will be something like:
-<pre><code>C:\Users\<i>username</i>\ubuntu></code></pre>
-            </li>
-            <li>Go into <a href="https://github.com/cioportfolio/gettingstarted">the github area for these lessons</a>. Use the green button to download a zip of the files. Unzip the file and move <code>Vagrantfile</code> and <code>bootstrap.sh</code> into the new folder you created</li>
-            <li>Back to the command line now:
-<pre><code>...\ubuntu><b>vagrant up</b></code></pre>
-                This will take some time, install loads of updates and set up unix.
-                You will get a new purple window but you can't get in there yet.
-<pre><code>...\ubuntu><b>vagrant ssh</b></code></pre>
-                Now you will see something like
-<pre><code>vagrant@ubuntu-xenial:~$</code></pre>
-                Unix is up and running. Now you need an account. Use this command and follow the prompts:
-                <pre><code>vagrant@ubuntu-xenial:~$ <b>sudo adduser <i>username</i></b></code></pre>
-                Get back to windows with
-<pre><code>vagrant@ubuntu-xenial:~$ <b>exit</b></code></pre>
-                The next commands will stop and restart unix (it will be much quicker this time). You should now be able to logon with that account you set up in the purple/red window.
-<pre><code>...\ubuntu><b>vagrant halt</b>
-...\ubuntu><b>vagrant up</b></code></pre>
-                You can 'up' and 'halt' whenever you need to start and stop the unix app.
-                Time to play around.
-                Find the "ubuntu software" icon on the left hand side.
-                Click on this then search for "chromium" in the box. Install this and you now have Chrome web browser.
-                
-        </li>
-        </ul>
-<li>
-    Run your own Wordpress site on your PC. I'll stop putting all of the commands in excrutiating detail because you will probably be getting the hang of things. We are going to use Vagrant and Unix again but in a different way.
-    <ul>
-        <li>
-            Start up the windows command prompt like you did in the previous lesson and create a new directory for your wordpress site e.g. <code>wordpress</code> or <code>test</code>
-        </li>
-        <li>
-            In your browser go to <code>https://github.com/cioportfolio/wordpress</code> and use the green button to download everthing as a .zip file. Unzip the file and copy the files to your new directory.
-        </li>
-        <li>
-            Back at the windows command prompt change to you new directory and run <code>vagrant up</code>. This will go away and build a basic wordpress installation.
-        </li>
-        <li>
-            Once it is finished (5 mins or so on a good network connection) go to your browser and type this special url <code>127.0.0.1:8080</code> and you should see the default starter wordpress site
-        </li>
-        <li>
-            If you use this url <code>127.0.0.1:8080/wp-login.php</code> you can sign in and change the site. The initial user name will be "admin" and password "admin"
-        </li>
-        <li>
-            When you have finished some wordpress configuration you can use <code>vagrant halt</code> to stop the unix machine and <code>vagrant up</code> when you want to use wordpress again. If things get messed up you can restart from the beginning by using <code>vagrant destroy</code>. The next <code>vagrant up</code> will re-install everything again.
-        </li>
-        <li>
-            Take care. Unless you use the wordpress export tools you will lose any work you are doing if something happens to your laptop or you do a <code>vagrant destroy</code>.
-        </li>
-    </ul>
-</li>
 </ol>
+<div style="display: inline-block; float: right;"><a href="ubuntu">Next lesson</a></div>
 
 
