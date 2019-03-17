@@ -5,42 +5,56 @@ layout: default
 <ul>
     <li><a href="index">The basics</a></li>
     <li><a href="ubuntu">Unix on your laptop</a></li>
-    <li>Wordpress on your laptop</li>
+    <li><a href="wordpress">Wordpress on your laptop</a></li>
     <li>Getting ready to go public</li>
 </ul>
-<div style="display: inline-block; float: left;"><a href="ubuntu">Previous lesson</a></div>
-<div style="display: inline-block; float: right;"><a href="public">Next lesson</a></div>
+<div style="display: inline-block; float: left;"><a href="wordpress">Previous lesson</a></div>
+<div style="display: inline-block; float: right;"><a href="index">Next lesson</a></div>
 
-<h1 style="display: block; clear: both;">Wordpress on your laptop</h1>
-<ol>
-<li>
-    Run your own Wordpress site on your PC. I'll stop putting all of the commands in excrutiating detail because you will probably be getting the hang of things. We are going to use Vagrant and Unix again but in a different way.
-    <ul>
+<h1 style="display: block; clear: both;">Getting ready to go public</h1>
+Hopefully your wordpress website is looking great on your laptop but very few people can see it there. To go public you need to sort out a few things.
+    <ol>
+        <li>Keeping your site safe in case something goes wrong</li>
+        <li>Renting a computer on the internet which can run wordpress</li>
+        <li>A url such as you can pass on to your fans and post on social media</li>
+        <li>A way to move your site from your laptop to the internet</li>
+    </ol>
+    <ol>
         <li>
-            Start up the windows command prompt like you did in the previous lesson and create a new directory for your wordpress site e.g. <code>wordpress</code> or <code>test</code>
+            <h2>Keeping your site safe</h2>
+            As some point something is going to go wrong. You might make some changes to your site which breaks something. Or you might drop your laptop and lose your files. Or some nasty hacker might break your site out of spite. When something goes wrong you will want a backup (probably several) so you can get your site back. Here are some articles which explain the options and some additional tips to keep your site secure.
+            <ul>
+                <li><a href="https://themeisle.com/blog/back-up-wordpress-website/">How to backup wordpress</a></li>
+                <li><a href="https://themeisle.com/blog/wordpress-backup-tips/">Wordpress backups: Mistakes to avoid</a></li>
+                <li><a href="https://themeisle.com/blog/wordpress-security-tips/">Wordpress security tips</a></li>
+            </ul>
+            Let's try this out. We are going to use another test wordpress site on your laptop. You won't be able to run two versions of wordpress at the same time but you can use <code>vagrant halt</code> and <code>vagrant up</code> to start and stop them. Use the instructions in the previous lesson to create another wordpress site on your laptop. Use a different folder name like <code>testsite</code> so that you don't mess up the site you have been working on. Use the test site for these steps:
+            <ul>
+                <li>Add a post to your new test site. It doesn't matter what it is as long as your can recognise it</li>
+                <li>Backup the test site using one of the options in the article</li>
+                <li>Make some obvious changes to the test site such as the text and style</li>
+                <li>Use your backup to restore the original version</li>
+                <li>Make sure you are comforable about backing up and restoring the test site before you go further</li>
+                <li>Now switch over to the site you have been working on</li>
+                <li>Make a backup of your main site</li>
+            </ul>
+            From now on make backups of your wordpress sites. The articles have some good suggestions of what to back up and how often. Remember to move the backups somewhere safe such as another computer or online storage like OneDrive or Google Drive
         </li>
         <li>
-            In your browser go to <code>https://github.com/cioportfolio/wordpress</code> and use the green button to download everthing as a .zip file. Unzip the file and copy the files to your new directory.
+            <h2>Renting a computer</h2>
+            You could actually publish your wordpress site from your laptop but that is not much good if your run out of power or shut it down. It can also cause performance and security problems. A better option is to use a computer on the internet. There are free options including ones provided by the Wordpress organisation but these limit what you can do. Instead there are many companies which rent computers for wordpress sites starting from around £5/month. The WordPress organisation provides <a href="https://wordpress.org/hosting/">some links</a> for some good companies. Search around for reviews and special offers. Before you pick one and sign-up look ahead at the next two steps as you might be able to save some money.
         </li>
         <li>
-            Back at the windows command prompt change to you new directory and run <code>vagrant up</code>. This will go away and build a basic wordpress installation.
-        </li>
+            <h2>Getting a url</h2>
+            The great urls you see of other website come from companies called "Domain Registrars". Registrars like <a href="https://www.whois.com/">WhoIs.com</a> or <a href="https://www.namecheap.com/">NameCheap.com</a> will let you see what is available and how much it will cost per year to use the url - sorry you only get to rent url's, you don't get to own them forever.
+            Some of the companies you looked at to rent a computer on the internet will also provide a url and include it in the price. Some will only offer a url which includes their company name or has funny letters and numbers which will be cheap but might not be what you want. Some will offer anything you can get through one of the registrars. Check the details of what they offer and what will be cheapest. Getting you renting your url and computer from the same company makes things slightly easier but your will find plenty of instructions if you rent your computer from one company and get your url from a different registrar.
+        </li> 
         <li>
-            Once it is finished (5 mins or so on a good network connection) go to your browser and type this special url <code>127.0.0.1:8080</code> and you should see the default starter wordpress site
+            <h2>Moving your site</h2>
+            The computer rental companies will probably provide some instructions and apps to move a wordpress site onto their computers and may also provide some backup apps as well. Read about what they offer and look at reviews to see what other people say. You may be able to use the backup that you created on your laptop. The good thing about that is you will be able to experiment on your laptop and make sure you like any changes before you publish them on the internet. There are some wordpress plugins which can make this easier and <a href="https://www.wpbeginner.com/wp-tutorials/how-to-move-wordpress-to-a-new-host-or-server-with-no-downtime/">articles</a> with ideas and suggestions to help.
         </li>
-        <li>
-            If you use this url <code>127.0.0.1:8080/wp-login.php</code> you can sign in and change the site. The initial user name will be "admin" and password "admin"
-        </li>
-        <li>
-            When you have finished some wordpress configuration you can use <code>vagrant halt</code> to stop the unix machine and <code>vagrant up</code> when you want to use wordpress again. If things get messed up you can restart from the beginning by using <code>vagrant destroy</code>. The next <code>vagrant up</code> will re-install everything again.
-        </li>
-        <li>
-            Take care. Unless you use the wordpress export tools you will lose any work you are doing if something happens to your laptop or you do a <code>vagrant destroy</code>.
-        </li>
-    </ul>
-</li>
-</ol>
-<div style="display: inline-block; float: left;"><a href="ubuntu">Previous lesson</a></div>
-<div style="display: inline-block; float: right;"><a href="public">Next lesson</a></div>
+    </ol>
+<div style="display: inline-block; float: left;"><a href="wordpress">Previous lesson</a></div>
+<div style="display: inline-block; float: right;"><a href="index">Next lesson</a></div>
 
 
