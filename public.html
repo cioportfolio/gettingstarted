@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<h1>Contents</h1>
+<ul>
+    <li><a href="index">The basics</a></li>
+    <li><a href="ubuntu">Unix on your laptop</a></li>
+    <li>Wordpress on your laptop</li>
+    <li>Getting ready to go public</li>
+</ul>
+<div style="display: inline-block; float: left;"><a href="ubuntu">Previous lesson</a></div>
+<div style="display: inline-block; float: right;"><a href="public">Next lesson</a></div>
+
+<h1 style="display: block; clear: both;">Wordpress on your laptop</h1>
+<ol>
+<li>
+    Run your own Wordpress site on your PC. I'll stop putting all of the commands in excrutiating detail because you will probably be getting the hang of things. We are going to use Vagrant and Unix again but in a different way.
+    <ul>
+        <li>
+            Start up the windows command prompt like you did in the previous lesson and create a new directory for your wordpress site e.g. <code>wordpress</code> or <code>test</code>
+        </li>
+        <li>
+            In your browser go to <code>https://github.com/cioportfolio/wordpress</code> and use the green button to download everthing as a .zip file. Unzip the file and copy the files to your new directory.
+        </li>
+        <li>
+            Back at the windows command prompt change to you new directory and run <code>vagrant up</code>. This will go away and build a basic wordpress installation.
+        </li>
+        <li>
+            Once it is finished (5 mins or so on a good network connection) go to your browser and type this special url <code>127.0.0.1:8080</code> and you should see the default starter wordpress site
+        </li>
+        <li>
+            If you use this url <code>127.0.0.1:8080/wp-login.php</code> you can sign in and change the site. The initial user name will be "admin" and password "admin"
+        </li>
+        <li>
+            When you have finished some wordpress configuration you can use <code>vagrant halt</code> to stop the unix machine and <code>vagrant up</code> when you want to use wordpress again. If things get messed up you can restart from the beginning by using <code>vagrant destroy</code>. The next <code>vagrant up</code> will re-install everything again.
+        </li>
+        <li>
+            Take care. Unless you use the wordpress export tools you will lose any work you are doing if something happens to your laptop or you do a <code>vagrant destroy</code>.
+        </li>
+    </ul>
+</li>
+</ol>
+<div style="display: inline-block; float: left;"><a href="ubuntu">Previous lesson</a></div>
+<div style="display: inline-block; float: right;"><a href="public">Next lesson</a></div>
+
+
