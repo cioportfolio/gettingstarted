@@ -18,18 +18,18 @@ https://git-scm.com/download/win
 https://git-scm.com/download/mac
 ```
 
-Download and install `VirtualBox` which is a utility for a sandbox so that your coding mistakes don't mess up your precious laptop or home computer. Choose Windows hosts if you have
+Download and install `VirtualBox` which is a utility for a sandbox so that your coding mistakes don't mess up your precious laptop or home computer. Choose the link for your type of laptop or home computer.
 
 **Windows**
 
 ```
-https://download.virtualbox.org/virtualbox/6.0.8/VirtualBox-6.0.8-130520-Win.exe
+https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe
 ```
 
 **Mac**
 
 ```
-https://download.virtualbox.org/virtualbox/6.0.8/VirtualBox-6.0.8-130520-OSX.dmg
+https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-OSX.dmg
 ```
 
 > It is possible to get an error on some versions of the Mac operating systems. If so try these steps:
@@ -43,13 +43,13 @@ Download and install `Vagrant` which is a utility which does a load of hard work
 **Windows**
 
 ```
-https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.msi
+https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_x86_64.msi
 ```
 
 **Mac**
 
 ```
-https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.dmg
+https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_x86_64.dmg
 ```
 
 **Optional:**
